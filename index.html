@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
+<body>
 <head>
+
 	<title>Hey! What's trending on the app today!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,9 +15,10 @@
 	<meta property="og:image" content="https://play-lh.googleusercontent.com/AqopIyKmTZNhJa4B87_6WlwCMEGnxSSP4_JxxJcE2koKP4sw-W8aCUuekYrOgrrOnPpv=w720-h205-rw"/>
 	<link rel="shortcut icon" href="https://play-lh.googleusercontent.com/urVIq3KHpF9hAm7FJpE2I4YlGfqMFpUdb5GMtQcASC1ODbWe1zuQFrF99ZPTELfE8wA=s52-rw" type="image/png"/>
 	<meta name="description" content="Download now! Find everything you need in one place, Discover a wide range of fun experiences with this app.">
-
+	
+	<link rel="stylesheet" type="text/css" href="./data/css/style-main.css">
+	<script type="text/javascript" src="./data/js/main.js"></script>
 </head>
-<body>
 
 <div class="main">
     <h2>Find everything you need in one place</h2>
@@ -52,7 +55,7 @@
     </li>
 	<li class="cards_item">
       <div class="card">
-	  	<a class="link" href="https://igram.world/">
+	  	<a class="link" href="./data/live_darshan.html">
         <div class="card_image"><img src="https://picsum.photos/500/300/?image=2"></div>
         <div class="card_content">
 		<i class="card_more fa-solid fa-podcast"></i>
@@ -142,192 +145,9 @@
     </li>
   </ul>
 </div>
-
-<h3 class="made_by">Made with ♡ Ads Free © 2024</h3>
-
-<style>
-/* Font */
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
-@import url(https://use.fontawesome.com/releases/v6.6.0/css/all.css);
-
-/* Design */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-@media (min-width: 150px) {
-  .cards_item {
-    width: 100%;
-  }
-}
-
-@media (min-width: 250px) {
-  .cards_item {
-    width: 50%;
-  }
-}
-
-@media (min-width: 600px) {
-  .cards_item {
-    width: 33.3333%;
-  }
-}
-
-
-html {
-  background-color: #ecf9ff;
-}
-
-body {
-  color: #272727;
-  font-family: 'Quicksand', serif;
-  font-style: normal;
-  font-weight: 800;
-  letter-spacing: 0;
-  padding: 2px;
-}
-
-.main{
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-h1 {
-    font-size: 24px;
-    font-weight: 400;
-    text-align: center;
-}
-h2 {
-    text-align: center;
-}
-
-img {
-  height: auto;
-  max-width: -webkit-fill-available;
-  vertical-align: middle;
-  object-fit: cover;
-  margin-bottom: 9px;
-  transition: transform 0.25s;
-}
-.link{
-text-decoration: none;}
-
-.btn {
-  color: #4d4d4d;
-  padding: 9px 0px;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 9px;
-  font-weight: 600;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
-}
-
-.btn:hover {
-	background: #f8e960;
-	color: #515151;
-	transition: 0.3s all ease-in-out;
-}
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.cards_item {
-  display: flex;
-  padding: 12px;
-}
-
-.card_image {
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
-
-.card {
-  background: linear-gradient(to bottom left, #ee76ac 40%, #ffcd9e 100%);
-  border-radius: 9px;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.cards_item:hover{  
-    transform: scale(1.05);
-	transition: 0.3s all ease-in-out;
-}
-
-.cards_item:hover .card_more {  
-	background-color: rgba(255, 255, 255, 0.12);
-	transition: 0.7s all ease-in-out; opacity: 0; 
-    visibility:hidden;
-}
-
-.cards_item:hover .btn {  
-	background: #f8e960;
-	color: #515151;
-	transition: 0.3s all ease-in-out;
-}
-
-.card_more {
-	position: absolute;
-    margin: -25px 0px 0px 10px;
-    height: 32px;
-    width: 32px;
-    border-radius: 50%;
-    background: #f8e960;
-    color: #515151;
-    align-self: flex-end;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.25s;
-}
-
-.fa-solid {
-  color: #4d4d4d;
-  font-size: 19px;
-}
-
-.card_content {
-    margin-bottom: 12px;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-top: 2px;
-}
-
-.card_title {
-  color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-  margin: 0px;
-}
-
-.card_text {
-  color: #ffffff;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;    
-  font-weight: 400;
-}
-.made_by{
-  font-weight: 400;
-  font-size: 13px;
-  margin-top: 35px;
-  text-align: center;
-}
-</style>
+<footer>
+	<div class="bottom"><a class="link" href="./">Login</a> | <a class="link" href="#">Donate</a> | <a class="link" href="#">Contact</a></div>
+	<h3 class="made_by">Made with ♡ Ads Free © 2024</h3>
+</footer>
 </body>
 </html>
