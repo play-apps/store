@@ -4,5 +4,5 @@
 	;
 
 $(function(){
-  $("#header").load("header.html"); 
+  $("#header").load("/store/header.html"); 
 });
