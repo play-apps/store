@@ -4,5 +4,6 @@
 	;
 
 $(function(){
-  $("#header").load("/store/header.html"); 
+  $("#header").load("/store/header.html");
+  $("#all").load("all.html");   
 });
