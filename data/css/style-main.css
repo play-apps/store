@@ -15,7 +15,7 @@
   }
 }
 
-@media (min-width: 250px) {
+@media (min-width: 400px) {
   .cards_item {
     width: 50%;
   }
