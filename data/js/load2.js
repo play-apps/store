@@ -6,5 +6,6 @@
 $(function(){
   $("#header").load("/store/header.html");
   $("#all").load("/store/data/all.html");
-  $("#live-head").load("/store/data/live/live-head.html");   
+  $("#live-head").load("/store/data/live/live-head.html");
+  $("#select").load("/store/data/live_select.html"); 	
 });
