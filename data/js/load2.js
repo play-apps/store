@@ -6,6 +6,5 @@
 $(function(){
   $("#header").load("/store/header.html");
   $("#all").load("all.html");
-  $("#mahakal").load("/store/data/location/mahakal.html");
-  $("#mahakal").load("/store/data/location/siddhivinayak.html");
+  $("#live-head").load("/store/data/live/live-head.html");   
 });
