@@ -1,5 +1,5 @@
 	document.getElementById("footer").innerHTML =
-		"<div id='select'></div>"
+		"<div class='text' id='select'></div>"
 	+	"<div class='bottom'><a class='link' href='/store'>Home</a> | <a class='link' href='#'>Donate</a> | <a class='link' href='https://amzn.to/46eth0K'>Shop</a> | <a class='link' href='https://forms.gle/3K4SPBr6ZJJgpheJA'>Contact</a></div>"
 	+ 	"<h3 class='made_by'>Made with <i class='fa-regular fa-heart'></i> Ads Free &copy; 2024</h3>"	
 	;
