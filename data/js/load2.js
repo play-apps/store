@@ -5,6 +5,6 @@
 
 $(function(){
   $("#header").load("/store/header.html");
-  $("#all").load("all.html");
+  $("#all").load("/store/data/all.html");
   $("#live-head").load("/store/data/live/live-head.html");   
 });
