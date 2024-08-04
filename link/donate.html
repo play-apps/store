@@ -5,11 +5,11 @@
         <meta charset="UTF-8">
         
         <script>
-urls = ['https://www.donatekart.com/', 'https://www.giveindia.org/', 'https://www.helpageindia.org/', 'https://www.akshayapatra.org/', 'https://popatbhaicharitablefoundation.org/',
+urls = ['https://popatbhaicharitablefoundation.org/', 'https://www.giveindia.org/', 'https://www.helpageindia.org/', 'https://www.akshayapatra.org/', 'https://www.donatekart.com/',
        'https://www.sadbhavnavrudhashram.org/', 'https://isha.sadhguru.org/in/en/donation', 'https://give.do/', 'https://manavsevagujarat.com/', 'https://srjbtkshetra.org/donation-options/'];
 var lastUrl = '';
 function getRandomIndex(arr){  
-  return Math.floor(Math.random() * ((arr.length-1) + 1));
+  return Math.floor(Math.random() * ((arr.length+1) - 1));
 }
 function openUrl(){
   url = urls[getRandomIndex(urls)]; 
@@ -33,7 +33,9 @@ function openUrl(){
         
     </head>
    <body>
+       <img src="/store/data/images/main/loading.gif" alt="Loadding" style="width:100%; height:auto; margin-top: 100px;">
+       <br><br>
         <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
-        <a href='javascript:openUrl()'>Please! click on this link</a>
+        <a href='javascript:openUrl()'>Please wait! or click on this link</a>
     </body>
 </html>
