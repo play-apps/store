@@ -1,16 +1,39 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
     <head>
-        <title>Live Darshan</title>
+        <title>Donation!</title>
         <meta charset="UTF-8">
         
-        <script type="text/javascript">
-            window.location.href = "https://www.donatekart.com"
-        </script>
+        <script>
+urls = ['https://www.donatekart.com/', 'https://www.giveindia.org/', 'https://www.helpageindia.org/', 'https://www.akshayapatra.org/', 'https://popatbhaicharitablefoundation.org/'
+       ];
+var lastUrl = '';
+function getRandomIndex(arr){  
+  return Math.floor(Math.random() * ((arr.length-1) + 1));
+}
+function openUrl(){
+  url = urls[getRandomIndex(urls)]; 
+  do {
+      if (url == lastUrl){
+        url = urls[getRandomIndex(urls)];
+      }
+    else{
+        lastUrl = url;
+        //Using alert instead of window.location for testing
+        window.location = url;       
+    }
+  }
+  while (lastUrl != url);
+  
+}  
+  </script>
+<script type="text/javascript">
+            window.location.href = "javascript:openUrl()"
+</script>
         
     </head>
    <body>
         <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
-        <a href='https://www.donatekart.com'>Please! click on this link</a>
+        <a href='javascript:openUrl()'>Please! click on this link</a>
     </body>
 </html>
