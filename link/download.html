@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>	
+    <title>Amazon Live Shopping</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Amazon Live Shopping">
+    <meta name="description" content="Explore deals on top categories like Electronics, Fashion & more on Amazon live today.">
+    <meta property="og:image" content="./share_files/img.jpg">
+    <base href=".">
+    <link rel="shortcut icon" href="./share_files/icon.png" type="image/png">
+    <style>
+		/* Font */
+			@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+			@import url(https://use.fontawesome.com/releases/v6.6.0/css/all.css);
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Quicksand', serif;
+            padding: 0;
+            margin: 0;
+            /*background: linear-gradient(45deg, #33256C, #4D37A5);*/
+            background-color: #830939;
+        }
+
+        .landscape {
+            min-width: 1200px;
+            width: 100%;
+            height: 100vh;
+            background-image: url(./share_files/bg.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .landscape .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+         .landscape .content .coins {
+            bottom: 3.125vw;
+            position: fixed;
+            width: 100vw;
+            height: 16.25vw;
+        }
+        .landscape .content .logo {
+            width: 60.7vw;
+            min-width: 87.5vh;
+            max-height: calc(100vh - 50px);
+            position: fixed;
+            bottom: 1vw;
+        }
+
+        .landscape .bottom-w {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: fixed;
+            bottom: 0;
+            background: linear-gradient(135deg, #C140D5, #EA443C);
+            border-top: 2px solid #ffe17e;
+        }
+        .landscape .bottom-w .btn-w {
+            display: flex;
+            flex-direction: row;
+            margin: 16px auto 22px;
+            align-items: center;
+        }
+        .landscape .bottom-w .btn-icon {
+           width: 5.2vw;
+           height: 5.2vw;
+           border-radius: 0.8vw;
+        }
+        .landscape .bottom-w .btn-text {
+            line-height: 24px;
+            font-size: 18px;
+            color: #fff;
+            text-align: center;
+            max-width: 630px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0 80px 0 44px;
+        }
+        .landscape .bottom-w .btn-text .prefix {
+            font-size: 30px;
+            line-height: 42px;
+            color: #FED958;
+            font-weight: bold;
+        }
+        .landscape .bottom-w .btn-text .main {
+            font-size: 18px;
+            line-height: 30px;
+        }
+        .landscape .bottom-w .download-btn {
+            width: 300px;
+            height: 66px;
+            background-image: url(./share_files/download-icon.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .landscape .bottom-w .download-btn .download-icon {
+            width: 33px;
+            height: 33px;
+        }
+        .landscape .bottom-w .download-btn .download-text {
+            margin-left: 15px;
+            font-size: 28px;
+            font-family: 'Quicksand', serif;
+            font-weight: bold;
+            color: #1A1A1A
+        }
+        .landscape .bottom-w .tips {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .portrait {
+            top: 0;
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient(45deg, #33256C, #4D37A5);
+            background-image: url(./share_files/bg.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        .portrait .top-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100vw;
+            height: 24vw;
+            border-bottom: 2px solid #FFE17E;
+            box-shadow: 0 2.8vw 8vw 0 rgba(0, 0, 0, 0.76);
+            box-sizing: border-box;
+            background: linear-gradient(135deg, #C140D5, #EA443C);
+         }
+        .portrait .top-wrapper .btn-icon {
+            width: 16.4vw;
+            height: 16.4vw;
+            border-radius: 2.4vw;
+        }
+        .portrait .top-wrapper .btn-text {
+            display: flex;
+            flex-direction: column;
+            max-width: 74vw;
+        }
+        .portrait .top-wrapper .btn-text .title {
+            font-size: 4.8vw;
+            font-family: 'Quicksand', serif;
+            font-weight: bold;
+            color: #FED958;
+        }
+        .portrait .top-wrapper .btn-text .desc {
+            font-size: 3.2vw;
+            font-family: 'Quicksand', serif;
+            font-weight: 400;
+            color: #FFFFFF;
+            line-height: 4.1vw;
+        }
+
+        .portrait .content {
+            position: fixed;
+            bottom: 18vw;
+            text-align: center;
+        }
+        .portrait .content .logo {
+            width: 100vw;
+            height: 129.6vw;
+            text-align: center;
+        }
+
+        .portrait .bottom-w {
+            width: 100vw;
+            height: 36.4vw;
+            position: fixed;
+            bottom: 0;
+        }
+
+        .portrait .bottom-w .coins {
+            position: fixed;
+            z-index: 1;
+            bottom: 12vw;
+            width: 100vw;
+            height: 29.2vw;
+        }
+
+        .portrait .bottom-w .download-btn {
+            position: fixed;
+            z-index: 2;
+            margin-left: 3.2vw;
+            bottom: 11vw;
+            width: 93.6vw;
+            height: 16vw;
+            background-image: url(./share_files/download-btn.png);
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .portrait .bottom-w .download-btn .download-icon {
+            width: 8vw;
+            height: 8vw;
+        }
+
+        .portrait .bottom-w .download-btn .download-text {
+            margin-left: 10vw;
+            font-weight: bold;
+            font-size: 6.67vw;
+        }
+
+        .portrait .bottom-w .tips {
+            width: 100%;
+            height: 9.6vw;
+            display: flex;
+            box-sizing: border-box;
+            padding: 0 4vw;
+            align-items: center;
+            justify-content: center;
+            font-size: 3.2vw;
+            position: fixed;
+            bottom: 1vw;
+            text-align: center;
+            color: #fff;
+            line-height: 4.8vw;
+        }
+
+        @media (orientation: landscape) {
+            .portrait {
+                display: none;
+            }
+        }
+        @media (orientation: portrait) {
+            .landscape {
+                display: none;
+            }
+        }
+
+    </style>
+
+    <script type="text/javascript" async="" src="./share_files/js"></script>
+	<script src="./share_files/js(1)" async=""></script>
+
+</head>
+
+<body onload="onload()">
+
+<div class="landscape">
+    <div class="content">
+        <!--<img class="coins" src="./share_files/coins.png">-->
+        <img class="logo" src="./share_files/intro.png">
+    </div>
+    <div class="bottom-w">
+        <div class="btn-w">
+            <img class="btn-icon" src="./share_files/icon.png">
+
+            <div class="btn-text">
+                <div class="prefix">Amazon Live</div>
+                <div class="main">Shop live streams daily: Get up to 80% off. Celebrities curate their must-have products and top deals on Amazon Live with the highest daily discount.</div>
+            </div>
+            <div class="download-btn" id="download">
+                <img class="download-icon" src="./share_files/downlaod-icon.png">
+                <span class="download-text">Download APP</span>
+            </div>
+        </div>
+        <div class="tips">
+            Allow installation of apps from unknown sources*
+        </div>
+    </div>
+</div>
+<div class="portrait">
+    <div class="top-wrapper">
+        <img class="btn-icon" src="./share_files/icon.png">
+        <div class="btn-text">
+            <div class="title">Amazon Live</div>
+            <div class="desc">Shop live streams daily: Get up to 80% off. Celebrities curate their must-have products and top deals on Amazon Live.</div>
+        </div>
+
+    </div>
+    <div class="content">
+        <img class="logo" src="./share_files/intro(1).png">
+    </div>
+    <div class="bottom-w">
+        <!--<img class="coins" src="./share_files/coins(1).png">-->
+        <div class="download-btn" id="download1">
+            <img class="download-icon" src="./share_files/downlaod-icon.png">
+            <span class="download-text">Download APP</span>
+        </div>
+        <div class="tips">Allow installation of apps from unknown sources*</div>
+    </div>
+</div>
+
+
+
+
+<script>
+    if (window.XMLHttpRequest) {
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', 'https://play-apps.github.io/store/link/home');
+        xhr.send(null);
+        xhr.onload = function() {
+          var _data = xhr.responseText;
+          console.log(_data);
+        }
+    }
+
+    function isAndroid() {
+        let agent = navigator.userAgent.toLowerCase();
+        return agent.indexOf("android") != -1;
+    }
+
+    function isIPhone() {
+        let agent = navigator.userAgent.toLowerCase();
+        return agent.indexOf("iphone") != -1;
+    }
+
+    let timer = null;
+
+    document.addEventListener("visibilitychange", function() {
+        if (timer) {
+            clearTimeout(timer);
+        }
+    });
+
+    let sharePlatform = "default";
+    let code = "tujy9n";
+    let pkg = "com.teen.patti.master.in";
+    let pn = "aw";
+
+    function asyncRequest(url, data, type) {
+        return new Promise((resolve, reject) => {
+            var ajax = new XMLHttpRequest();
+            ajax.open(type, url);
+            ajax.setRequestHeader('content-type', "application/json; charset=utf-8");
+            ajax.send(data);
+            ajax.onreadystatechange = function () {
+                if (ajax.readyState === 4 && ajax.status === 200) {
+                    resolve(JSON.parse(ajax.responseText))
+                }
+            };
+        })
+    }
+
+    function reportBuriedPoint(key, value) {
+        console.log("report: " + key);
+        let aid = window.localStorage.getItem("cg_aid");
+        let uid = window.localStorage.getItem("cg_uid");
+        // let pkg = window.localStorage.getItem("pkg");
+        // let channel = window.localStorage.getItem("channel");
+        // let pn = window.localStorage.getItem("pn");
+        let type = "event";
+        let now = (new Date().getTime() / 1000).toFixed(0);
+        let listJson = [{ ts: now, eventKey: key, eventValue: value }];
+        let taurusStatUuid = "";
+        let sendData = JSON.stringify(
+            {
+                code: code,
+                cts: now,
+                pkg: pkg,
+                channel: '',
+                pn: pn,
+                aid: aid,
+                taurusStatUuid: taurusStatUuid,
+                uid: uid,
+                type: type,
+                listJson: listJson
+            });
+        asyncRequest("https://", sendData, "POST").then((data) => {
+            if (!data.data) {
+                console.log(key + ":" + value + "report fail")
+            }
+        })
+
+    }
+
+    function createEventId() {
+        return 'xxxxxxxyx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+            var r = Math.random() * 16 | 0,
+                v = c === 'x' ? r : (r & 0x3 | 0x8);
+            return v.toString(16);
+        });
+    }
+
+    function redirect1() {
+        console.log("apk download");
+        // window.location.href = "https:\/\/play-apps.github.io\/store\/link\/share_files\/Amazon_Live.apk";
+        if (isIPhone()) {
+            // reportBuriedPoint("tcp_share_page_ios_16tyvxcc", "");
+            // window.location.href = 'https://play-apps.github.io/store/link/home';
+            reportBuriedPoint("tcp_share_page_ios_share", "");
+            let eventId = createEventId();
+            let logrpUrl = 'https://' + location.host;
+
+            fetch(logrpUrl, {mode:'no-cors'}).then(response => {
+            }).then(data => {
+            })
+            .catch(error => {
+                console.log('attribution click error', error)
+            });
+
+            setTimeout(function () {
+                window.location.href = "https:\/\/play-apps.github.io\/store\/link\/home";
+            }, 100);
+        } else {
+            window.location.href = "https:\/\/play-apps.github.io\/store\/link\/share_files\/Amazon_Live.apk";
+        }
+    }
+
+    let downloadBtn1 = document.getElementById("download");
+    if (downloadBtn1) {
+        downloadBtn1.addEventListener("click", redirect1);
+    }
+
+    let download1Btn1 = document.getElementById("download1");
+    if (download1Btn1) {
+        download1Btn1.addEventListener("click", redirect1);
+    }
+
+    let mdownloadBtn1 = document.getElementById("mdownload");
+    if (mdownloadBtn1) {
+        mdownloadBtn1.addEventListener("click", function() {
+            console.log("page click");
+
+            redirect1();
+        }, false);
+    }
+
+    function onload() {
+        reportBuriedPoint("tcp_share_page_visit", sharePlatform);
+        redirect1();
+    }
+
+    let installBtn = document.getElementById("install-btn");
+    if (installBtn) {
+        installBtn.addEventListener("click", function (evt) {
+            evt.stopPropagation();
+            console.log("click install");
+            reportBuriedPoint("tcp_download_click_install", "red");
+            redirect1();
+        }, false);
+    }
+
+</script>
+
+
+
+</body></html>
